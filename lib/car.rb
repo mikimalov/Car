@@ -11,5 +11,9 @@ module Car
       @color = color
       @speed = 0
     end
+
+    def speed_up
+      @speed += 40
+    end
   end
 end
