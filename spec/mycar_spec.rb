@@ -10,19 +10,21 @@ RSpec.describe Car::MyCar do
         expect(audi.speed).to eq(0)
     end
 
-    it "increases current speed for 10 km/h" do
+    it "increases current speed for 20 km/h" do
         audi.speed_up(20)
         expect(audi.speed).to eq(20)
     end
 
-    it "increases current speed by default for 20 km/h" do
+    it "increases current speed by default" do
         audi.speed_up
         expect(audi.speed).to be(Car::MyCar::SPEED_OFFSET)
     end
 
-    it "decreases current speed by default for 10 km/h" do
+    it "decreases current speed by default" do
+        audi.speed_up
+        audi.speed_up
         audi.slow_down
-        expect(audi.speed).to eq(-Car::MyCar::SPEED_OFFSET)
+        expect(audi.speed).to eq(Car::MyCar::SPEED_OFFSET)
     end
 
     it "decreases current speed for 10 km/h" do

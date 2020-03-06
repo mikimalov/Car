@@ -22,8 +22,8 @@ module Car
       @speed -= decrease
     end
 
-    def spray_paint(arg)
-     @color = arg
+    def spray_paint(color)
+     @color = color
     end
 
     def add_defects(defects)
@@ -32,10 +32,6 @@ module Car
 
     def service_info
       "Defects to be fixed: #{@defects.join(', ')}"
-    end
-
-    def speed_up
-      @speed += 40
     end
   end
 end
