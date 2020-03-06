@@ -48,9 +48,9 @@ RSpec.describe Car::MyCar do
     end
 
     it "lists all the defects" do
-      audi.add_defects(:failure)
+      audi.add_defects(failure)
       audi.add_defects('oil leak')
-      expect(audi.service_info).to eq("Defects to be fixed: #{:failure}, oil leak")
+      expect(audi.service_info).to eq("Defects to be fixed: #{failure}, oil leak")
     end
 end
 
