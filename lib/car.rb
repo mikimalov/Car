@@ -33,5 +33,9 @@ module Car
     def service_info
       "Defects to be fixed: #{@defects.join(', ')}"
     end
+
+    def speed_up
+      @speed += 40
+    end
   end
 end
